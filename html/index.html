@@ -1,0 +1,89 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3" />
+        <title>Workspace</title>
+        
+        <!-- <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script> -->
+        <script type="text/javascript" src="lib/ace/ace.js"></script>
+        <script type="text/javascript" src="lib/framework.js"></script>
+
+        <style type="text/css">
+            html, body {
+                width: 100%; height: 100%; overflow: hidden;
+            }
+
+            nav {
+                display: block;
+            }
+
+            textarea {
+                display: block;
+            }
+
+            .layout {
+                position: absolute; overflow: hidden;
+            }
+
+            button {
+                text-indent: 19px;
+                border: 1px solid #666;
+                border-radius: 4px 4px;
+                box-shadow: 0px 0px 4px #000;
+                background-repeat: no-repeat !important;
+            }
+
+
+            #Control {
+                background: #9b9b9b; /* Old browsers */
+                background: -moz-linear-gradient(top,  #9b9b9b 0%, #e2e2e2 8%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9b9b9b), color-stop(8%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #9b9b9b 0%,#e2e2e2 8%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #9b9b9b 0%,#e2e2e2 8%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #9b9b9b 0%,#e2e2e2 8%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #9b9b9b 0%,#e2e2e2 8%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b9b9b', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+
+                padding-top: 2px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <!--
+        
+        
+        
+        <br />
+        
+        -->
+        
+        <!-- view -->
+        <div class="layout" style="left: 0px; right: 240px; bottom: 146px; top: 0px;">
+            <canvas id="mainCanvas" width="800" height="400" style="position: absolute; left: 2px; top: 2px; right: 0px; bottom: 0px;"></canvas>
+        </div>
+        <!-- menu -->
+        <div class="layout" style="left: 0px; right: 240px; bottom: 120px; height: 26px;">
+            <nav id="Control">
+                <button id="btSalvar">Salvar</button>
+                <button id="btLoad">Load saved</button>
+            </nav>
+        </div>
+        <!-- editor lateral imagens -->
+        <div class="layout" style="right: 0px; bottom: 50%; top:0px; width: 240px;">
+            <div id="mapStruct" style="position: absolute; left: 0px; right: 2px; top: 0px; bottom: 2px; overflow: auto; overflow-x: hidden; overflow-y: auto;"></div>
+        </div>
+        <!-- editor lateral properties -->
+        <div class="layout" style="right: 0px; bottom: 0px; top:50%; width: 240px;">
+            <label style="position: absolute; left: 0px; right: 2px; top: 2px; overflow: visible; font-size: 10px; font-family: Courier;">
+                &nbsp;ID: <input type="text" id="pointID" value="" style="position: absolute; left: 26px; right: 0px;" />
+            </label>
+            <div id="propertiesEditor" style="position: absolute; left: 0px; right: 2px; top: 30px; bottom: 0px; overflow: auto; overflow-x: hidden; overflow-y: auto;"></div>
+        </div>
+        <!-- codigo final -->
+        <div class="layout" style="left: 0px; right: 240px; bottom: 0px; height: 120px;">
+            <div id="dados" style="position: absolute; left: 2px; right: 2px; bottom: 2px; top: 0px; overflow: auto; overflow-x: hidden; overflow-y: auto;"></div>
+        </div>
+    </body>
+</html>
